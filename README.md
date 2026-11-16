@@ -1,15 +1,21 @@
 
-# UrbanNest - House Price Prediction Application
+# UrbanNest - House Price Prediction Application 🏡
+
+UrbanNest is a Machine Learning-powered house price prediction application designed to help real estate professionals estimate residential property prices based on different property characteristics.
+
+The application uses an optimized regression pipeline with trained preprocessing transformations to generate property price predictions through an interactive Streamlit web interface.
+
+🚀 **Live Demo:** https://urbannest-price-predictor.streamlit.app/
+
+💻 **GitHub Repository:** https://github.com/sezzz7e/urbannest-price-prediction-app
+
+---
 
 ## Project Overview
 
-UrbanNest is a machine learning powered house price
-prediction application designed to help real estate
-agents estimate residential property prices.
+UrbanNest predicts residential property prices using important property features such as living area, lot size, bedrooms, bathrooms, overall quality, construction year, garage capacity, neighborhood, and house style.
 
-The application uses a trained regression pipeline
-and preprocessing transformations to generate
-property price predictions.
+The project covers the complete Machine Learning workflow, including data preprocessing, feature engineering, model training, hyperparameter optimization, model evaluation, serialization, and deployment.
 
 ## Technologies Used
 
@@ -18,95 +24,143 @@ property price predictions.
 - Pandas
 - NumPy
 - Scikit-learn
+- XGBoost
 - Joblib
 - Streamlit
 - GitHub
 
 ## Dataset
 
-Ames Housing Dataset
+- **Dataset:** Ames Housing Dataset
+- **Total Records:** 2,930
+- **Target Variable:** SalePrice
+- **Problem Type:** Regression
 
-Total Records: 2,930
-
-Target Variable: SalePrice
-
-Problem Type: Regression
-
-## Features
+## Application Features
 
 - Interactive property input form
 - Living area and lot area
 - Bedrooms and bathrooms
-- Overall quality
+- Overall property quality
 - Construction and remodeling years
 - Garage capacity
-- Neighborhood and house style
-- Real-time price estimation
+- Neighborhood selection
+- House style selection
+- Instant house price prediction
 - Input validation and error handling
+- User-friendly Streamlit interface
 
 ## How to Use
 
-1. Open the live application.
-2. Enter the living area.
-3. Enter lot area.
-4. Select bedrooms and bathrooms.
-5. Choose overall property quality.
+1. Open the UrbanNest live application.
+2. Enter the property's living area.
+3. Enter the lot area.
+4. Select the number of bedrooms and bathrooms.
+5. Choose the overall property quality.
 6. Enter construction and remodeling years.
 7. Select garage capacity.
-8. Select neighborhood and house style.
-9. Click Predict House Price.
+8. Choose the neighborhood and house style.
+9. Click the **Predict House Price** button.
 10. View the estimated property value in USD.
 
-## Local Installation
+## Machine Learning Workflow
 
-Clone the repository:
+### 1. Data Preprocessing
 
-git clone https://github.com/YOUR_USERNAME/UrbanNest-Price-Prediction-App.git
+- Handled missing numerical values using median imputation.
+- Handled missing categorical values using most-frequent imputation.
+- Applied StandardScaler to numerical features.
+- Applied OneHotEncoder to categorical features.
 
-Navigate into the folder:
+### 2. Feature Engineering
 
-cd UrbanNest-Price-Prediction-App
+Created additional property-related features:
 
-Install dependencies:
+- House_Age
+- Remodel_Age
+- Total_Bathrooms
+- Total_Porch_Area
+- Total_Finished_Area
 
-pip install -r requirements.txt
+### 3. Model Training and Optimization
 
-Run the application:
+- Compared multiple regression models.
+- Selected XGBoost Regression as the optimized model.
+- Applied RandomizedSearchCV for hyperparameter optimization.
+- Used 5-fold cross-validation for model evaluation.
 
-streamlit run app.py
+### 4. Model Serialization
 
-## Model Information
-
-The application uses the best regression pipeline
-selected during Task 2.
-
-The complete fitted pipeline is saved using Joblib.
-
-It includes the trained preprocessing and prediction
-components used by the model.
+The complete fitted regression pipeline was saved using Joblib, preserving the trained preprocessing and prediction components.
 
 ## Model Evaluation
 
-MAE: [Insert actual Task 2 MAE]
+The optimized model was evaluated using the following regression metrics:
 
-RMSE: [Insert actual Task 2 RMSE]
+| Evaluation Metric | Result |
+|---|---|
+| MAE | Add your actual Task 2 result |
+| RMSE | Add your actual Task 2 result |
+| R² Score | Add your actual Task 2 result |
 
-R2 Score: [Insert actual Task 2 R2]
+## Local Installation
 
-## Live Demo
+**1. Clone the repository**
 
-[Open UrbanNest Live Application](YOUR_STREAMLIT_URL)
+```bash
+git clone https://github.com/sezzz7e/urbannest-price-prediction-app.git
+```
+
+**2. Navigate into the project folder**
+
+```bash
+cd urbannest-price-prediction-app
+```
+
+**3. Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+**4. Run the Streamlit application**
+
+```bash
+streamlit run app.py
+```
+
+**5. Open in your browser**
+
+```text
+http://localhost:8501
+```
+
+## Live Deployment
+
+The application is deployed using Streamlit Community Cloud and connected to GitHub.
+
+**Live Application:** https://urbannest-price-predictor.streamlit.app/
 
 ## Limitations
 
-- The model uses historical Ames housing data.
-- Predictions may not represent current real estate prices.
-- Some features use training-data defaults.
-- Predictions are estimates, not guaranteed valuations.
+- The model is trained using historical Ames Housing Dataset records.
+- Predictions may not represent current real estate market prices.
+- Some property features may use default values derived from the training data.
+- Predictions are estimates and should not be considered guaranteed property valuations.
 
 ## Author
 
-Abdullah Shehzad
+**Abdullah Shehzad**
 
-Software Engineering Student
+Software Engineering Student | Machine Learning Enthusiast
+
+- **GitHub:** https://github.com/sezzz7e
+- **Project Repository:** https://github.com/sezzz7e/urbannest-price-prediction-app
+- **Live Application:** https://urbannest-price-predictor.streamlit.app/
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
+
+**Built with Python, Machine Learning, and Streamlit.**Student
 Machine Learning Internship Project
